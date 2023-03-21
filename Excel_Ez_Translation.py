@@ -68,7 +68,7 @@ def translate():
     try:
         wb = load_workbook('file.xlsx')
         ws = wb.active
-
+        ws['B1'].value = language
         for x in range(ws.max_row):
             x += 1
             ws[f'B{x+1}'].value = googletrans.Translator().translate(ws[f'A{x+1}'].value, dest=language).text
