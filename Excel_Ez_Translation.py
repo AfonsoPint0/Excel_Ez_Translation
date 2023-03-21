@@ -25,7 +25,7 @@ def menu():
     try:
         var = int(input("\tOption : "))
         if var < 0  or var > 3:
-            raise exception()
+            raise Exception()
     except:
         print("\n Invalid choice")
         os.system('pause')
